@@ -1,0 +1,26 @@
+<div class='container'>
+    <h1>All Games</h1>
+    <!--
+    <ul>
+        <li *ngFor='let game of games'>
+            Name : {{ game.name }}<br /> Description : {{ game.description }}<br /> Price : {{ game.price }}
+        </li>
+    </ul>
+  -->
+    <table class="table">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+        </tr>
+        <tr *ngFor='let game of games; let index = index'>
+          <td scope="row">{{ index }}</td>
+          <td>{{ game._id }}</td>
+          <td>{{ game.name }}</td>
+          <td>{{ game.description }}</td>
+          <td>{{ game.price }}</td>
+        </tr>
+      </table>
+</div>
