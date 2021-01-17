@@ -1,0 +1,9 @@
+<div>
+    <h1>Delete Game</h1>
+    <form [formGroup]="game" (ngSubmit)="onSubmit()">
+        <br>
+        <label for="name">Name: <input  type="text" name="name" id="name" formControlName="name" (ngModelChange)="searchGame($event)"></label>
+        <br>
+        <button class="btn btn-primary" type="submit" [disabled]="!game.valid">Delete</button>
+    </form>
+</div>

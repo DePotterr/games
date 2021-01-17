@@ -1,0 +1,29 @@
+<div>
+    <div>
+        <h1>Search game</h1>
+        <form [formGroup]="searchGameForm">
+            <input class="form-control" type="text" name="name" id="name" formControlName="name" (ngModelChange)="modelChanged($event)"> 
+        </form>
+    </div>
+    <div>
+        <h2>Results</h2>
+        <table id="table" class="table">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">#</th>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+            </tr>
+            <tr *ngFor='let game of foundGames; let index = index'>
+              <td><a [routerLink]="['../remove',game.name]"><img src="../../assets/delete.jpg" alt="deleteImg" style="height: 25px;"></a></td>
+              <td scope="row">{{ index + 1}}</td>
+              <td>{{ game._id }}</td>
+              <td><a [routerLink]="['../edit',game.name]">{{ game.name }}</a></td>
+              <td>{{ game.description }}</td>
+              <td>{{ game.price }}</td>
+            </tr>
+          </table>
+    </div>
+</div>

@@ -25,7 +25,6 @@ export class GameAddComponent {
       this.game.value.description,
       this.game.value.price
     ));
-    this.router.navigate(['']);
   }
 
 }

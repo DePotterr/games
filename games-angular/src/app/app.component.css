@@ -1,0 +1,7 @@
+#hamburgerBtn{
+    border: none;
+    outline: none;
+}
+#hamburgerBtn:hover{
+    background-color: #2d3135;
+}

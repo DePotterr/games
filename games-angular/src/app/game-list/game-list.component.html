@@ -7,8 +7,9 @@
         </li>
     </ul>
   -->
-    <table class="table">
+    <table id="table" class="table">
         <tr>
+          <th scope="col"></th>
           <th scope="col">#</th>
           <th scope="col">ID</th>
           <th scope="col">Name</th>
@@ -16,9 +17,10 @@
           <th scope="col">Price</th>
         </tr>
         <tr *ngFor='let game of games; let index = index'>
-          <td scope="row">{{ index }}</td>
+          <td><a [routerLink]="['remove',game.name]"><img src="../../assets/delete.jpg" alt="deleteImg" style="height: 25px;"></a></td>
+          <td scope="row">{{ index + 1}}</td>
           <td>{{ game._id }}</td>
-          <td>{{ game.name }}</td>
+          <td><a [routerLink]="['edit',game.name]">{{ game.name }}</a></td>
           <td>{{ game.description }}</td>
           <td>{{ game.price }}</td>
         </tr>

@@ -1,0 +1,13 @@
+<div>
+    <h1>Edit Game</h1>
+    <form [formGroup]="game" (ngSubmit)="onSubmit()">
+        <br>
+        <label for="name">Name: </label><input class="form-control" type="text" name="name" id="name" formControlName="name">
+        <br>
+        <label for="description">Description: </label><input class="form-control" type="text" formControlName="description">
+        <br>
+        <label for="price">Price: </label><input class="form-control" type="text" name="price" id="price" formControlName="price">
+        <br>
+        <button type="submit" [disabled]="!game.valid">Edit</button>
+    </form>
+</div>
