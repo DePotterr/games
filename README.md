@@ -1,4 +1,4 @@
-Games app 
+# Games app
 
 Games-angular folder is mongo en couchdb tesamen (i know it is confusing)
 - games-react is met mongodb
